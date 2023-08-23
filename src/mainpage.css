@@ -1,0 +1,33 @@
+body {
+    background-color: #f2e1d5;
+}
+.header-name {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+.button-body {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* .first-project {
+    margin-bottom: 10%;
+} */
+
+/* This is for photo section */
+
+.project-pic {
+    padding-bottom: 4%;
+}
+
+.project-pic img {
+    width: 100%;
+    border-radius: 2%;
+}
+
+.project-display {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10%;
+}
