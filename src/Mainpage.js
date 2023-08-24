@@ -38,7 +38,7 @@ const MainPage = () => {
                         <div className="project-pic third-pic">
                             <img src={thirdproject}></img>
                         </div>
-                        <button>Json Ecommerce Challenge</button>
+                        <button><a href="https://dummy-json-ecommerce.netlify.app/products" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Json Ecommerce Challenge</a></button>
                     </div>
                 </div>        
             </div>
