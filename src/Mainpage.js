@@ -1,46 +1,70 @@
-import React from "react";
-import ReactDOM from 'react-dom/client';
+import React, {useState} from "react";
 import './mainpage.css';
-import firstproject from './assets/firstproject.png'
-import secondproject from './assets/secondproject.png'
-import fume1 from './assets/fume1.png'
-import thirdproject from './assets/thirdproject.png'
+import { prevProjects } from "./data";
+import resume from './assets/resume.png'
 
 const MainPage = () => {
+    const [currentProject, setCurrentProject] = useState(0);
+    const [currentDesc, setCurrentDesc] = useState(0);
+    const [currentLang, setCurrentLang] = useState(0);
+    console.log(prevProjects);
+
+    const changeProject = (index) => {
+        setCurrentProject(index);
+    }
+    const changeDesc = (index) => {
+        setCurrentDesc(index);
+    }
+
     return (
         <div>
-            <div className="header-name">
-                <h1>Luqman Hakim's Portfolio</h1>
+            <div className="one-block">
+                <h1>
+                Hello my name is
+                <br></br>
+                <span>Luqman Hakim</span> 
+                </h1>
             </div>
-            <div className="button-body">
-                <div className="first-sec-proj">
-                    <div className="project-display first-project">
-                        <div className="project-pic first-pic">
-                            <img src={firstproject}></img>
-                        </div>
-                        <button><a href="https://fe-mentor-qrcode.netlify.app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Fe QR Challenge</a></button>
+            <div className="one-block">
+                <div className="content-row">
+                    <div className="left-side">
+                        <h1>Description</h1>
                     </div>
-                    <div className="project-display second-project">
-                        <div className="project-pic second-pic">
-                            <img src={fume1}></img>
-                        </div>
-                        <button><a href="https://tourmaline-shortbread-88c02d.netlify.app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Fume Project</a></button>
+                    <div className="right-side">
+                        <img src={resume}></img>
                     </div>
                 </div>
-                <div className="third-fourth proj">
-                    <div className="project-display third-project">
-                        <div className="project-pic second-pic">
-                            <img src={secondproject}></img>
-                        </div>
-                        <button><a href="https://vermillion-biscotti-a4e74b.netlify.app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Fe Promo Card Challenge</a></button>
+            </div>
+            <div className="one-block">
+                <div className="content-row">
+                    <div className="left-side">
+                        <img src={prevProjects[currentProject].images.thumbnail}></img>
                     </div>
-                    <div className="project-display fourth-project">
-                        <div className="project-pic third-pic">
-                            <img src={thirdproject}></img>
+                    <div className="right-side">
+                        <div className="one-row">
+                            <h1>{prevProjects[currentProject].name}</h1>
                         </div>
-                        <button><a href="https://dummy-json-ecommerce.netlify.app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Json Ecommerce Challenge</a></button>
+                        <div className="one-row">
+                            <h1>difficulty : {prevProjects[currentProject].difficulty}</h1>
+                        </div>
+                        <div className="one-row">
+                            <p>
+                            Description - 
+                            <br></br>
+                            <span>{prevProjects[currentProject].description[currentDesc]}</span>
+                            </p>
+                        </div>
+                        <div className="break"></div>
+                        <div className="one-row">
+                            <p>Language used : {prevProjects[currentProject].Language[currentLang]}</p>
+                        </div>
+                        <div className="one-row">
+                            {prevProjects.map((projects, index) => (
+                                <button key={index} onClick={() => changeProject(index)}></button>
+                            ))}
+                        </div>
                     </div>
-                </div>        
+                </div>
             </div>
         </div>
     )

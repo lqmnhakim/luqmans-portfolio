@@ -1,33 +1,20 @@
 body {
     background-color: #f2e1d5;
+    margin: 2% 3% 2% 3%;
 }
-.header-name {
+.one-block {
+    display: block;
+}
+.content-row {
     display: flex;
-    justify-content: center;
-    padding: 5%;
+    justify-content: space-around;
 }
-.button-body {
-    display: flex;
-    justify-content: space-evenly;
+.right-side img {
+    width: 500px;
+    height: auto;
 }
-/* .first-project {
-    margin-bottom: 10%;
-} */
-
-/* This is for photo section */
-
-.project-pic {
-    padding-bottom: 4%;
-}
-
-.project-pic img {
-    width: 100%;
-    border-radius: 2%;
-}
-
-.project-display {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10%;
+.left-side img {
+    width: 500px;
+    height: auto;
+    border-radius: 5%;
 }
