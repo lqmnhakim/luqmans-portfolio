@@ -13,7 +13,8 @@ export const prevProjects = [
         "Language" : {
             0: "HTML",
             1: "CSS",
-        }
+        },
+        "liveview" : "https://fe-mentor-qrcode.netlify.app/"
     },
     {
         "id" : 2,
@@ -29,11 +30,12 @@ export const prevProjects = [
         "Language" : {
             0: "HTML",
             1: "CSS", 
-        }  
+        },
+        "liveview" : "https://vermillion-biscotti-a4e74b.netlify.app/"  
     },
     {
         "id" : 3,
-        "name" : "Fume Ecommerce Website Mockup",
+        "name" : "Fume Ecommerce Website",
         "images" : {
             "thumbnail" : require("./assets/fume1.png"),
             "screenshots" : {
@@ -51,7 +53,8 @@ export const prevProjects = [
             1: "CSS", 
             2: "Javascript",
             3: "React Framework",
-        }  
+        },
+        "liveview" : "https://fume-clothing.netlify.app/"  
     },
     {
         "id" : 4,

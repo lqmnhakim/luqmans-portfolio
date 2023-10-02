@@ -1,9 +1,43 @@
 body {
     background-color: #f2e1d5;
     margin: 2% 3% 2% 3%;
+    background-image: url('./assets/backgroundphoto.jpg'), url('./assets/mountains.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+}
+.content-headline {
+    justify-content: center;
+    align-items: center;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+.first-block {
+    margin-bottom: 10%;
 }
 .one-block {
+    height: 100vh;
+    width: 100vw;
     display: block;
+
+}
+.main-headline {
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+}
+.content-headline h1 {
+    font-size: 40px;
+
+}
+.content-headline span {
+    font-size: 70px;
 }
 .content-row {
     display: flex;
@@ -13,8 +47,50 @@ body {
     width: 500px;
     height: auto;
 }
+.resume-photo {
+    display: none;
+    
+}
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+}
 .left-side img {
     width: 500px;
     height: auto;
     border-radius: 5%;
+}
+.left-side {
+    width: 445px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.deets-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headline-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.project-sect {
+    margin-top: 5%;
+}
+.button-switch {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 4%;
+}
+.button-switch button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid black;
 }
